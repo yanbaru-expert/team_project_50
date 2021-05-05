@@ -1,5 +1,5 @@
-Rails.application.routes.draw 
-  root 'texts#index'
+Rails.application.routes.draw do
+  root "texts#index"
   resources :texts, :only => [:index, :show]
   resources :movies, :only => [:index]
 end
