@@ -1,0 +1,9 @@
+ja:
+  enums:
+    text:
+      genre:
+        invisible: '非表示'
+        basic: 'Basic'
+        ruby: 'Ruby'
+        rails: 'Ruby on Rails'
+        php: 'PHP'
