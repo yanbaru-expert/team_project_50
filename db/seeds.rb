@@ -13,3 +13,17 @@ User.find_or_create_by!(email: email) do |user|
   user.password = password
   puts 'ユーザーの初期データインポートに成功しました。'
 end
+
+require "csv"
+
+Text.destroy_all
+CSV.foreach("db/csv_data/text_data.csv", headers: true) do |row|
+  Text.create(row.to_h)
+end
+puts "テキスト教材の初期データインポート完了！"
+
+Movie.destroy_all
+CSV.foreach("db/csv_data/movie_data.csv", headers: true) do |row|
+  Movie.create(row.to_h)
+end
+puts "動画教材の初期データインポート完了！"
