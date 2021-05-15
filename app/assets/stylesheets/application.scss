@@ -3,7 +3,7 @@
  *= require_self
  */
 
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 /* 全体 */
 
 .base-container {
@@ -27,4 +27,8 @@
 
 .mw-xl {
   max-width: 1200px;
+}
+
+body {
+  padding-top: 69px;
 }
