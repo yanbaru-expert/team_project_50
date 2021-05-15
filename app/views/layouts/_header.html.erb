@@ -1,15 +1,23 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
-  <span class="navbar-brand">やんばるエキスパート</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
+      <%= image_tag("yanbaru_expert_logo.png")  %>
       <% if user_signed_in? %>
         <%# ログイン時 %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ruby <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Ruby/Railsテキスト教材", texts_path %></li>
+            <li><%= link_to "Ruby/Rails動画教材", movies_path %></li>
+          </ul>
+        </li>
+        <%= link_to "Ruby", edit_user_registration_path %>
+        <%= link_to "PHP", edit_user_registration_path %>
         <%= link_to "アカウント編集", edit_user_registration_path %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
-        <%= "【ログイン中のアドレス】#{current_user.email}" %>
       <% else %>
         <%# 非ログイン時 %>
         <%= link_to "新規登録", new_user_registration_path %>
