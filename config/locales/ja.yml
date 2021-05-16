@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      text: テキスト
+      movie: 動画
+    attributes:
+      text:
+        genre: ジャンル
+        title: タイトル
+        content: 内容
+    attributes:
+      movie:
+        genre: ジャンル
+        title: タイトル
+        url: URL
