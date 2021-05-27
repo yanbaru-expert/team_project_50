@@ -1,2 +1,9 @@
-<h1 class="text-center">Ruby/Railsテキスト教材</h1>
-<%= render partial: "text", collection: @texts %>
+<div class="container">
+  <div class="row">
+    <h1 class="text-title mt-2 mb-4">Ruby/Rails <br class="d-sm-none">
+      テキスト教材</h1>
+  </div>
+</div>
+<div class="row">
+  <%= render partial: "text", collection: @texts %>
+</div>

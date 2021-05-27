@@ -1,4 +1,8 @@
 // テキスト教材カード
+.text-title {
+  margin: 0 auto;
+}
+
 .card-box {
   margin: 0 auto;
   padding-right: 15px;
@@ -6,9 +10,17 @@
 }
 
 .card {
-  height: 360px;
+  height: 370px;
+  max-width: 376px;
+  margin: 0 auto;
 }
 
 img {
   max-width: 100%;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
 }
