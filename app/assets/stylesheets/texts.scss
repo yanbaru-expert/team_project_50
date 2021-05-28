@@ -1,6 +1,7 @@
 // テキスト教材カード
 .text-title {
   margin: 0 auto;
+  text-align: center;
 }
 
 .card-box {
@@ -9,12 +10,13 @@
   padding-left: 15px;
 }
 
-.card {
+.content-card {
   height: 370px;
   max-width: 376px;
   margin: 0 auto;
 }
 
-img {
+.img-fluid {
   max-width: 100%;
+  height: auto;
 }
