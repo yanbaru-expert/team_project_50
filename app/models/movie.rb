@@ -14,4 +14,5 @@ class Movie < ApplicationRecord
     php: 5,
   }
 
+  RAILS_GENRE_LIST = %w[basic git ruby rails]
 end
