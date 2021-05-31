@@ -1,8 +1,9 @@
 <div class="card-box col-12 col-md-6 col-lg-4">
   <div class="card content-card border-dark mb-3">
     <div class="card-header p-0">
-      <%= embed_youtube(movie.url) %>
-      
+      <div class="embed-responsive embed-responsive-16by9">  
+        <%= embed_youtube(movie.url) %>
+      </div>
     </div>
     <div class="card-body">
       <a href="#" class="btn btn-secondary btn-block">読破済みにする</a>
