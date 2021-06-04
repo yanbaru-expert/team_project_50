@@ -4,7 +4,12 @@
  */
 
 @import 'bootstrap/scss/bootstrap';
+
 /* 全体 */
+
+a:hover {
+  text-decoration: none;
+}
 
 .base-container {
   margin: 0 auto;
