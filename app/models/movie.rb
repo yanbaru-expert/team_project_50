@@ -17,8 +17,8 @@ class Movie < ApplicationRecord
   RAILS_GENRE_LIST = %w[basic git ruby rails]
   PHP_GENRE_LIST = %w[php]
 
-  def self.filter_by(params)
-    if params == "php"
+  def self.filter_by(genre)
+    if genre == "php"
       Movie.where(genre: Movie::PHP_GENRE_LIST)
     else
       Movie.where(genre: Movie::RAILS_GENRE_LIST)
