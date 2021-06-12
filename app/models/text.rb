@@ -1,4 +1,5 @@
 class Text < ApplicationRecord
+  has_many :readprogresses, dependent: :destroy
   with_options presence: true do
     validates :genre
     validates :title
@@ -13,6 +14,6 @@ class Text < ApplicationRecord
     rails: 4,
     php: 5
   }
-  
+
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
 end
