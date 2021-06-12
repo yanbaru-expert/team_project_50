@@ -1,7 +1,6 @@
-
 class TextsController < ApplicationController
   def index
-    @texts = Text.where(genre: Text::RAILS_GENRE_LIST)
+    @texts = Text.filter_by(params[:genre])
   end
 
   def show
