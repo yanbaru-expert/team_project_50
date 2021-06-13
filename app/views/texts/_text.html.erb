@@ -8,7 +8,11 @@
       <div class="card-body">
       <%# TODO: 読破済みの部分のコードをobjectタグで囲み修正する %>
         <object>
-         <a class="btn btn-secondary btn-block" data-remote="true" rel="nofollow" data-method="post" href="#">読破済みにする</a>
+          <% if text.readprogressed_by?(current_user) %>
+            <%= render "readprogress", text: text %>
+          <% else %>
+            <%= render "unreadprogress", text: text %>
+          <% end %>
         </object>
         <h5 class="card-title mt-3"><%= text.title %></h5>
         <p class="card-genre">【<%= text.genre %>】</p>
@@ -16,7 +20,3 @@
     <% end %>
     </div>
   </div>
-  
-    
-
-
