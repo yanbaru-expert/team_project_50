@@ -3,6 +3,6 @@ class WatchProgress < ApplicationRecord
   belongs_to :movie
   validates :user_id, uniqueness: {
     scope: :movie_id,
-    message: "は同じ投稿に2回以上試聴済みはできません"
+    message: "は同じ投稿に2回以上視聴済みはできません"
   }
 end
