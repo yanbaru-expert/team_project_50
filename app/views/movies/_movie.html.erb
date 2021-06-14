@@ -13,7 +13,7 @@
           <%= render "diswatch_progress", movie: movie %>
         <% end %>
       </p>
-      <p class="card-title mt-3"><%= "Lv.#{movie_counter + 1}：" %><%= movie.title %></p>
+      <p class="card-title mt-3"><%= "Lv.#{movie_counter + @movies.offset_value + 1 }：" %><%= movie.title %></p>
     </div>
   </div>
 </div>
