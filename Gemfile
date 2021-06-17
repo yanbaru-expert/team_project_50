@@ -3,22 +3,23 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-gem 'bootsnap', '>= 1.4.4', require: false
 gem 'activeadmin'
+gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
+gem 'devise-bootstrap-views', '~> 1.0'
 gem 'devise-i18n'
+gem 'enum_help'
 gem 'jbuilder', '~> 2.7'
+gem 'kaminari'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.1'
 gem 'rails-i18n', '~> 6.0'
+gem 'redcarpet'
+gem 'rouge'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
-gem 'enum_help'
-gem 'devise-bootstrap-views', '~> 1.0'
-gem "redcarpet"
-gem "rouge"
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
