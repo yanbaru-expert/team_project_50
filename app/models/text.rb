@@ -18,8 +18,18 @@ class Text < ApplicationRecord
     git: 2,
     ruby: 3,
     rails: 4,
-    php: 5
+    php: 5,
   }
 
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+
+  PHP_GENRE_LIST = %w[php].freeze
+
+  def self.filter_by(genre)
+    if genre == "php"
+      Text.where(genre: Text::PHP_GENRE_LIST)
+    else
+      Text.where(genre: Text::RAILS_GENRE_LIST)
+    end
+  end
 end
