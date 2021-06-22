@@ -27,11 +27,11 @@ ActiveAdmin.register Movie do
   #
   # or
   #
-  # permit_params do
-  #   permitted = [:genre, :title, :url]
+  permit_params do
+    permitted = [:genre, :title, :url]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
-  # end
+  end
   filter :genre, as: :select, collection: Movie.genres_i18n.invert.transform_values { |v| Movie.genres[v] }
   filter :title
   filter :url

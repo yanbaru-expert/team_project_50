@@ -28,11 +28,11 @@ ActiveAdmin.register Text do
   #
   # or
   #
-  # permit_params do
-  #   permitted = [:genre, :title, :content]
+  permit_params do
+    permitted = [:genre, :title, :content]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
-  # end
+  end
   filter :genre, as: :select, collection: Text.genres_i18n.invert.transform_values { |v| Text.genres[v] }
   filter :title
   filter :content
