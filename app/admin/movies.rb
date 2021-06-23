@@ -1,4 +1,5 @@
 ActiveAdmin.register Movie do
+  permit_params :genre, :title, :url
 
   index do
     selectable_column
@@ -18,20 +19,7 @@ ActiveAdmin.register Movie do
     end
     f.actions
   end
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :genre, :title, :url
-  #
-  # or
-  #
-  permit_params do
-    permitted = [:genre, :title, :url]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  end
+
   filter :genre, as: :select, collection: Movie.genres_i18n.invert.transform_values { |v| Movie.genres[v] }
   filter :title
   filter :url

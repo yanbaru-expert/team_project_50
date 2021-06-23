@@ -1,6 +1,6 @@
 ActiveAdmin.register Text do
+  permit_params :genre, :title, :content
 
-  # permit_params :genre, :title
   index do
     selectable_column
     id_column
@@ -19,20 +19,7 @@ ActiveAdmin.register Text do
     end
     f.actions
   end
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :genre, :title, :content
-  #
-  # or
-  #
-  permit_params do
-    permitted = [:genre, :title, :content]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  end
+
   filter :genre, as: :select, collection: Text.genres_i18n.invert.transform_values { |v| Text.genres[v] }
   filter :title
   filter :content
