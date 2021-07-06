@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-title mt-2 mb-4"><%= title %> <br class="d-sm-none">
+      テキスト教材</h1>
+  </div>
+</div>
+<div class="row">
+  <%= render partial: "text", collection: @texts %>
+</div>

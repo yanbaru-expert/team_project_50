@@ -1,0 +1,24 @@
+
+  <div class="card-box col-12 col-md-6 col-lg-4">
+    <div class="card content-card border-dark mb-3">
+    <%= link_to "/texts/#{text.id}" do %>
+      <div class="card-header p-0">
+        <img loading="lazy" alt="<%= text.title %>" class="img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
+      </div>
+      <div class="card-body">
+      <%# TODO: 読破済みの部分のコードをobjectタグで囲み修正する %>
+        <object>
+        <p id="text-<%= text.id %>">
+          <% if text.readprogressed_by?(current_user) %>
+            <%= render "readprogress", text: text %>
+          <% else %>
+            <%= render "unreadprogress", text: text %>
+          <% end %>
+          </p>
+        </object>
+        <h5 class="card-title mt-3"><%= text.title %></h5>
+        <p class="card-genre">【<%= text.genre %>】</p>
+      </div>
+    <% end %>
+    </div>
+  </div>
